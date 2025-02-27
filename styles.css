@@ -1,0 +1,300 @@
+body {
+    font-family: "Kanit", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    box-sizing: border-box; /*เพื่อให้ขอบและระยะห่างไม่ทำให้ขนาดองค์ประกอบเปลี่ยนไป*/
+}
+
+/* Header */
+header {
+    position: sticky; /*ให้แถบเมนูติดอยู่ด้านบนเมื่อเลื่อนหน้าเว็บ*/
+    top: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.store-info {
+    text-align: left;
+    font-size: 16px;
+}
+
+.contact-info a {
+    text-align: right;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hover-info1:hover a {
+    color: #1E90FF; /* สีข้อความเมื่อเอาเมาส์ไปชี้ */
+}
+
+.hover-info2:hover a {
+    color: #06c755; /* สีข้อความเมื่อเอาเมาส์ไปชี้ */
+}
+
+
+/* Coverphoto Section */
+
+.Coverphoto {
+    background-image: url("img/H1.jpg"); /* ใส่ชื่อไฟล์ภาพของคุณ */
+    background-size: cover; /* ให้ภาพครอบคลุมพื้นที่ */
+    background-position: center; /* จัดให้อยู่กึ่งกลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
+    height: 300px; /*สูงเท่ากับความสูงของ viewport */
+    display: flex; /* ใช้ flex เพื่อจัดตำแหน่งเนื้อหา */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* สีตัวอักษร */
+    text-align: center;
+}
+
+.Coverphoto .item {
+    font-size: 20px;
+}
+
+
+/* สำหรับหน้าจอขนาดเล็ก (มือถือ) */
+@media (max-width: 768px) {
+    .Coverphoto {
+        background: url('img/H1.jpg') no-repeat center center;
+        background-size: cover; /* ปรับภาพให้แสดงแบบคงสัดส่วน */
+        height: auto; /* ลดความสูง */
+        padding: 10px; /* ลด padding เพื่อประหยัดพื้นที่ */
+    }
+}
+
+/* Header2 */
+.header2 {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    color:#333;
+}
+
+.header2 h1 {
+    font-size: 30px;
+}
+
+.header2 h3 {
+    font-size: 23px;
+    color: #666;
+}
+
+/* ส่วนของ Main */
+ /* CSS สำหรับข้อความปกติ */
+.hover-text1, .hover-text2 {
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+/* CSS เมื่อเอาเมาส์ไปชี้ที่ข้อความ */
+.hover-text1:hover {
+    color: #1E90FF; /* สีข้อความเมื่อเอาเมาส์ไปชี้ */
+}
+
+/* CSS เมื่อเอาเมาส์ไปชี้ที่ข้อความ */
+.hover-text2:hover {
+    color: #06c755; /* สีข้อความเมื่อเอาเมาส์ไปชี้ */
+}
+
+/* ภาพตัวอย่างที่รับซื้อทั้งหมด */
+.h3textcenter {
+    text-align: center; /* กึ่งกลาง */
+    margin: 20px; /* ระยะห่างด้านบนและล่าง */
+    color: #1c2831;
+}
+
+.imageall {
+    display: flex;
+    flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่ */
+    justify-content: space-around;
+    gap: 15px;
+    padding: 10px;
+}
+
+/* ภาพตัวอย่างที่รับซื้อทั้งหมด */
+.imageall img {
+    width: 200px;
+    height: 300px;
+    margin: 3px; /*ระยะห่างของภาพ*/
+    object-fit: cover; /* ป้องกันภาพเสียสัดส่วน */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /*  เพิ่มเอฟเฟกต์ขยายเมื่อเอาเมาส์ไปชี้ */
+}
+
+.imageall img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Section กรอบ ส่วนล่างของ ติดต่อ */
+.contact {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    border-radius: 10px; /* ทำให้มุมโค้ง */
+}
+/* ส่วนล่างของ ติดต่อ */
+/* .contact h2 {
+    font-size: 1.5em;
+    color: #333;
+} */
+
+.contact a {
+    color: #333;
+    text-decoration: none;
+    /* font-weight: bold; */
+}
+
+/* CSS เมื่อเอาเมาส์ไปชี้ที่ข้อความ */
+.contact1 :hover {
+    color: #1E90FF; /* สีข้อความเมื่อเอาเมาส์ไปชี้ */
+}
+
+.contact2 :hover {
+    color: #06c755; /* สีข้อความเมื่อเอาเมาส์ไปชี้ */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    /* padding: 5px; */
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: none; /* ซ่อนปุ่มตอนเริ่ม */
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* ขยายเล็กน้อยเมื่อ hover */
+}
+
+/* ปรับให้เว็บไซต์พอดีกับหน้าจอมือถือ */
+body {
+    max-width: 100%;
+    overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
+}
+
+/* ปรับ Header ให้เล็กลงในมือถือ */
+@media (max-width: 768px) {
+    header {
+        padding: 8px 15px;
+        flex-direction: column; /* จัดให้อยู่กึ่งกลางเมื่อเป็นจอเล็ก */
+        text-align: center;
+    }
+    .store-info, .contact-info {
+        font-size: 14px;
+    }
+}
+
+/* ปรับ Coverphoto สำหรับมือถือ */
+@media (max-width: 480px) {
+    .Coverphoto {
+        height: 200px;
+        padding: 5px;
+    }
+    .Coverphoto .item {
+        font-size: 16px;
+    }
+}
+
+/* ปรับขนาดรูปภาพทั้งหมดให้พอดีหน้าจอ */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ปรับให้ layout ของ image gallery เหมาะกับมือถือ */
+@media (max-width: 480px) {
+    .imageall {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .imageall img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* ปรับขนาดข้อความของ header2 ให้พอดี */
+@media (max-width: 768px) {
+    .header2 h1 {
+        font-size: 24px;
+    }
+    .header2 h3 {
+        font-size: 18px;
+    }
+}
+
+/* ปรับ Card Layout ให้พอดีกับมือถือ
+@media (max-width: 768px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .card img {
+        width: 90%;
+        height: auto;
+    }
+} */
+
+/* ปรับ Contact Section */
+@media (max-width: 480px) {
+    .contact {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* ปรับ Footer */
+@media (max-width: 480px) {
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* ปรับปุ่ม "Back to Top" ให้เล็กลงในมือถือ */
+@media (max-width: 480px) {
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
